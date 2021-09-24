@@ -15,7 +15,7 @@ Map<String, WidgetBuilder> getApplicationRoutes() { // Regresa un mapa de rutas 
 
   return <String, WidgetBuilder> {
     '/'                  : (BuildContext context) => HomePage(),
-     AvatarPage.pageName : (BuildContext context) => AvatarPage(),
+     AvatarPage.pageName : (BuildContext context) => AvatarPage(), // Otra manera de escribir la ruta
     'alert'              : (BuildContext context) => AlertPage(),
     'card'               : (BuildContext context) => CardsPage(),
     'animated'           : (BuildContext context) => AnimatedContainerP(),

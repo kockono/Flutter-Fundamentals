@@ -7,7 +7,7 @@ void main () {
   print(numeros);
 
   //Tamaño fijo
-  List masNumeros = new List(5);
+  List masNumeros = new List|(5);
   // masNumero.add(1); Esto no es correcto
   masNumeros[0] = 1;
   print(masNumeros);

@@ -8,11 +8,12 @@ void main() {
 }
 
 
-String saludar({String texto, int nombre}) {
+
+String saludar({String texto ='', int nombre = 0}) {
   
   return '$texto $nombre';
 }
 
-String saludarFlecha({String texto, int nombre}) => '$texto $nombre';
+String saludarFlecha({String texto ='', int nombre = 0}) => '$texto $nombre';
   
 

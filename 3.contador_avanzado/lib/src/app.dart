@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vscode/src/pages/contador_pages.dart';
+// import 'package:flutter_vscode/src/pages/home_page.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -8,6 +9,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Center(
           child: ContadorPage(),
+          // child: HomePage(),
         ));
   }
 }

@@ -53,8 +53,10 @@ class _ContadorPageState extends State<ContadorPage> {
   void _reset() {
     setState(() => _conteo = 0);
   }
-
+  
   void _add() {
-    setState(() => _conteo++);
+    setState(
+      () => _conteo++
+      );
   }
 }
