@@ -1,0 +1,30 @@
+{
+    "nombreApp" : "Componentes",
+    "rutas" : [
+        {
+            "ruta" : "alert",
+            "icon" : "add_alert",
+            "texto": "Noticias"
+        },
+        {
+            "ruta" : "avatar",
+            "icon" : "accessibility",
+            "texto": "Avatares"
+        },
+        {
+            "ruta" : "card",
+            "icon" : "folder_open",
+            "texto": "Arte De Queen's Knight"
+        },
+        {
+            "ruta" : "animated",
+            "icon" : "donut_large",
+            "texto": "Boss En Contrucción"
+        },
+        {
+            "ruta" : "slider",
+            "icon" : "tune",
+            "texto": "Zoom Queen's Knight"
+        }
+    ]
+}
