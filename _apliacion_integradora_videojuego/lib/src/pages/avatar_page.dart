@@ -14,7 +14,7 @@ class AvatarPage extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(5.0),
             child: CircleAvatar(
-              backgroundImage: NetworkImage('https://queens-knights.netlify.app/assets/img/monita.png'),
+              backgroundImage: AssetImage('assets/pixel-heart.png'),
               backgroundColor: Colors.transparent,
             ),
           ),
@@ -23,18 +23,13 @@ class AvatarPage extends StatelessWidget {
 
       body: Center(
         child: FadeInImage(
-            image: NetworkImage('https://queens-knights.netlify.app/assets/img/monita.png'),
+            image: AssetImage('assets/queen.png'),
             height: 100.0,
             width:  100.0,
             placeholder: AssetImage('assets/jar-loading.gif'),
             fadeInDuration: Duration(milliseconds: 200),
           )
         ),
-
-      floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add_location),
-            onPressed: () => Navigator.pop(context) // Popea la ruta anterior
-          ),
     );
   }
 }

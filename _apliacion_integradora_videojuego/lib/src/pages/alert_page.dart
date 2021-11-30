@@ -9,7 +9,7 @@ class AlertPage extends StatelessWidget {
     return Scaffold(
           appBar: AppBar(
             title: Text('Sección de noticias'),
-             backgroundColor: Color.fromRGBO(32,37,40, 1.0),
+            backgroundColor: Color.fromRGBO(32,37,40, 1.0),
             
           ),
           body: Center(
