@@ -27,8 +27,15 @@ class _ContadorPageState extends State<ContadorPage> {
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.remove), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.remove), label: "Home2")
+          ])
+        );     
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: _crearBotones());
+        // floatingActionButton: _crearBotones());
+
   }
 
   Widget _crearBotones() {
@@ -53,10 +60,8 @@ class _ContadorPageState extends State<ContadorPage> {
   void _reset() {
     setState(() => _conteo = 0);
   }
-  
+
   void _add() {
-    setState(
-      () => _conteo++
-      );
+    setState(() => _conteo++);
   }
 }

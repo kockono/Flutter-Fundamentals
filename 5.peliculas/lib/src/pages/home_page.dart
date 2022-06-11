@@ -3,6 +3,8 @@ import 'package:peliculas/src/providers/peliculas_providers.dart';
 import 'package:peliculas/src/widgets/card_swiper_widget.dart';
 import 'package:peliculas/src/widgets/movie_horizontal.dart';
 
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 
 class HomePage extends StatelessWidget {
@@ -42,13 +44,14 @@ class HomePage extends StatelessWidget {
   Widget _swiperTarjertas() {
     return FutureBuilder(
 
-      future: peliculasProvider.getEnCines(),
+      // Recogemos las peliculas
+      future: peliculasProvider.getEnCines(), 
       builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
 
-        if(snapshot.hasData) {
+        if(snapshot.hasData) { // La retornamos si es que existe informacion
            return CardSwiper(peliculas: snapshot.data);
         } else {
-          return Container(
+          return Container( // De lo contrario un circulo de carga
             height: 400.0,
             child:  Center(
               child: CircularProgressIndicator(),
@@ -79,11 +82,35 @@ class HomePage extends StatelessWidget {
                 );
             }
             
-        })
+        }),
+        ButtonBar(children: [
+          _crearBotones()
+        ],)
           // Text('Populares', style: Theme.of(context).textTheme.headline6,),
         ],
       ),
     );
   }
+  
+  Widget _crearBotones() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        SizedBox(width: 30.0),
+        FloatingActionButton(onPressed: _postInFirebase, child: Icon(Icons.replay_outlined)),
+      ],
+    );
+  }
 
+ Future <http.Response> _postInFirebase() {
+  return http.post(
+    Uri.parse('https://kratos-thor-default-rtdb.firebaseio.com/events.json'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+    body: jsonEncode(<String, String>{
+      'title': "Prueba",
+    }),
+  );
+  }
 }
