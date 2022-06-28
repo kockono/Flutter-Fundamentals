@@ -14,7 +14,13 @@ class DetailsScreen extends StatelessWidget {
           // Son widget que tienen comportamiento preprogramado cuando movemos el padre
           _CustomAppBar(),
           SliverList(
-            delegate: SliverChildListDelegate([_PosterAndTitle()]),
+            delegate: SliverChildListDelegate([
+              _PosterAndTitle(),
+              _PosterAndTitle(),
+              _PosterAndTitle(),
+              _PosterAndTitle(),
+              _PosterAndTitle(),
+            ]),
           )
         ],
       ),
