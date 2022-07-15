@@ -13,7 +13,7 @@ class AppState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      // Solo inicializa el proyecto cuando sea necesario, con lazy eso puede cambiar
+      // Hasta que se necesite se crea la instancea, con false apenas inicializa la app lo instancea
       providers: [
         ChangeNotifierProvider(
           create: (_) => MoviesProvider(),
